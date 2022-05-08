@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="wrap-counter">
+        <h1>People Entered:</h1>
+    <h2 id="count-el">0</h2>
+
+    <p id="error" style="color: red;"></p>
+    <button id="increment-btn" class="btn1">Increment</button>
+    <button id="decrease-btn" class="btn2">Decrease</button> <br>
+    <button id="local-save"  class="btn3">Save</button>
+
+    <!-- <div>
+        <h5>Previous Entered people</h5>
+        <div>
+
+        </div>
+    </div> -->
+    </div>
+
+
+    <script>
+
+
+        function addPerson() {
+
+           let count = 0
+           let button =  document.getElementById("increment-btn");
+           let storage = window.localStorage;
+           let localsave = document.getElementById("local-save");
+           
+
+           button.addEventListener("click", () => {
+            let error = document.getElementById("error");
+            count ++
+            error.innerText = ""
+            document.getElementById("count-el").innerText = count;
+
+            localsave.addEventListener("click", () => {
+                localStorage.setItem("count", count);
+            })
+        })
+
+        let decrement = document.getElementById("decrease-btn");
+
+        decrement.addEventListener("click", () => {
+            let error = document.getElementById("error");
+
+            if(count === 0 ) {
+                error.innerText = "Please increase to decrease"
+            } else {
+                error.innerText = ""
+                count--
+            }
+            // count --
+            document.getElementById("count-el").innerText = count;
+        })
+
+        return count
+
+        }
+
+        addPerson()
+
+    
+    </script>
+</body>
+</html>

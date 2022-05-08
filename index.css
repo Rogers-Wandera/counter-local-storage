@@ -1,0 +1,58 @@
+.wrap-counter {
+    background-image: url(./images/bg.jpeg);
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+    width: 50%;
+    margin: 10rem auto;
+    border-radius: 5px;
+}
+
+.wrap-counter > h1 {
+    color: blue;
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+
+.wrap-counter > h2 {
+    font-size: 50px;
+    color: green;
+    font-weight: bold;
+}
+
+.wrap-counter > button {
+    padding: 1.5rem;
+    color: white;
+    border: 0;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.wrap-counter > .btn1 {
+    background-color: hotpink;
+}
+
+.wrap-counter .btn1:hover {
+    padding: 1.1rem;
+    background-color: cornflowerblue;
+}
+
+.wrap-counter .btn2 {
+    background-color: chartreuse;
+}
+
+.wrap-counter .btn2:hover {
+    padding: 1.1rem;
+    background-color: rgb(104, 137, 197);
+}
+
+.wrap-counter .btn3 {
+    background-color: goldenrod;
+}
+
+.wrap-counter .btn3:hover {
+    padding: 1.1rem;
+    background-color: rgb(104, 137, 197);
+}

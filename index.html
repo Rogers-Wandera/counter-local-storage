@@ -16,6 +16,7 @@
     <button id="increment-btn" class="btn1">Increment</button>
     <button id="decrease-btn" class="btn2">Decrease</button> <br>
     <button id="local-save"  class="btn3">Save</button>
+    <p id="saved-count"></p>
 
     <!-- <div>
         <h5>Previous Entered people</h5>
@@ -26,50 +27,6 @@
     </div>
 
 
-    <script>
-
-
-        function addPerson() {
-
-           let count = 0
-           let button =  document.getElementById("increment-btn");
-           let storage = window.localStorage;
-           let localsave = document.getElementById("local-save");
-           
-
-           button.addEventListener("click", () => {
-            let error = document.getElementById("error");
-            count ++
-            error.innerText = ""
-            document.getElementById("count-el").innerText = count;
-
-            localsave.addEventListener("click", () => {
-                localStorage.setItem("count", count);
-            })
-        })
-
-        let decrement = document.getElementById("decrease-btn");
-
-        decrement.addEventListener("click", () => {
-            let error = document.getElementById("error");
-
-            if(count === 0 ) {
-                error.innerText = "Please increase to decrease"
-            } else {
-                error.innerText = ""
-                count--
-            }
-            // count --
-            document.getElementById("count-el").innerText = count;
-        })
-
-        return count
-
-        }
-
-        addPerson()
-
-    
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
